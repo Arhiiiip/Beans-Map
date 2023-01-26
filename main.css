@@ -1,0 +1,366 @@
+.headTable{
+    height: 100px;
+}
+
+.tableData td{
+    width: 100vh;
+    min-height: 100%;
+    vertical-align: top;
+}
+
+.bodyM{
+    min-height: 100vh;
+    background-color: #1f1f1f;
+}
+
+.beans-background {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    padding: 20px calc(45% - 65px);
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    background: #333333;
+    border-radius: 6px;
+}
+.beanc-text{
+    vertical-align: center;
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-size:30px;
+    color: #E0E0E0;
+    margin-right: auto;
+    margin-left: auto;
+}
+.CDI-MB-EJB-text {
+    width: 39px;
+    height: 27px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22.0741px;
+    line-height: 27px;
+    /* identical to box height */
+
+    /* Gray 1 */
+    color: #333333;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.CDI-background {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 33%;
+    height: 47px;
+
+    background: #F79625;
+    border-radius: 6px;
+}
+
+.MB-background {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 33%;
+    height: 47px;
+
+    background: #00FF38;
+    border-radius: 6px;
+}
+.EJB-background{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 33%;
+    height: 47px;
+
+    background: #56CCF2;
+    border-radius: 6px;
+}
+
+.CDI-MB-EJB-second-background{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 40px;
+    gap: 20px;
+
+    background: #333333;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+}
+.EJB-thirty-background{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 40px;
+    gap: 20px;
+
+    position: absolute;
+    width: 161px;
+    height: 57px;
+    left: 82px;
+    top: 2188px;
+
+    /* Gray 2 */
+    background: #4F4F4F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+}
+.CDI-second-text {
+    width: 36px;
+    height: 27px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22.0741px;
+    line-height: 27px;
+    /* identical to box height */
+
+
+    color: #F79625;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.MB-second-text {
+    width: 29px;
+    height: 27px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22.0741px;
+    line-height: 27px;
+    /* identical to box height */
+
+    color: #00FF38;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.EJB-second-text {
+    width: 241px;
+    height: 27px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22.0741px;
+    line-height: 27px;
+    /* identical to box height */
+
+    /* Blue 3 */
+    color: #56CCF2;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.orange-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    border-radius: 6px;
+    background: #333333;
+
+    color: #F79625;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.back-text{
+    border-radius: 6px;
+    background: #333333;
+    max-width: 425px;
+}
+
+.back-light-text{
+    border-radius: 6px;
+    background: #575757;
+    width: 170px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-info{
+    width: 250px;
+    height: 50px;
+}
+
+.info-text{
+    max-width: 425px;
+}
+
+.white-text {
+    color: #c0c0c0;
+        width: 425px;
+    padding: 10px 15px 10px 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+.ppzgreen-text {
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #00FF38;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+.blue-text {
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #56CCF2;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.bs-text {
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #2b4da2;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.pink-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #A54AA7;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+.gray-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #B9B9B9;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+.yellow-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #FFF72F;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+.blue-code-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #74FEE9;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+.purple-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #A54AA7;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+.green-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #89AC6D;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <title>Map Beans</title>
+
+    <script>
+        window.onload = function (){
+            let mas = ['infoSetter','infoConstruct','infoProperty','AnotationEx','XMLEx','MDBAll','EBAll','SBText','stLess','stFul','sngEx'];
+            for(let n = 0; n < mas.length; n++){
+                toggle_visibility(mas[n])
+                toggle_visibility(mas[n])
+            }
+        }
+    </script>
+
+    <script language="JavaScript">
+        function toggle_visibility(id) {
+            let e = document.getElementById(id);
+            if(e.style.display === 'block')
+                e.style.display = 'none';
+            else
+                e.style.display = 'block';
+        }
+    </script>
+</head>
+<body class="bodyM">
+<table class="tableData">
+    <tbody>
+    <tr>
+        <td colspan="3" class="headTable">
+            <div class="beans-background"><span class="beanc-text">Beans</span></div>
+        </td>
+    </tr>
+    <tr>
+        <td class="CDIBean">
+            <p class="CDI-background"><span class="CDI-MB-EJB-text">CDI</span></p>
+            <div class=""><p class="white-text back-text"><span class="orange-text">Beans CDI</span> - это классы, которые CDI может создавать, управлять
+                и внедрять автоматически, чтобы удовлетворять зависимостям других объектов. Практически любой класс Java
+                может управляться и вводиться с помощью CDI.
+                Задаётся с помощью сеттеров, конструктора и аннотаций к полям, конструкторам или методам.</p></div>
+            <button class="back-text orange-text button-info" onclick="toggle_visibility('infoSetter')">Setter</button>
+            <br/>
+            <div id='infoSetter' class=""><p class="back-text info-text white-text">
+                <span class="purple-text">public class</span><span class="yellow-text"> HelloBean</span>{<br/>
+                <span class="purple-text">private</span> String name;<br>
+
+                <span class="purple-text">public void</span> <span
+                    class="blue-code-text">setName(String name)</span>{<br/>
+                this.name = name;<br/>
+                }<br/>
+                }
+            </p></div>
+
+            <button class="back-text orange-text button-info" onclick="toggle_visibility('infoConstruct')">Construct</button>
+            <br/>
+            <div id='infoConstruct' class=""><p class="back-text info-text white-text">
+                <span class="purple-text">public class</span><span class="yellow-text"> HelloBean</span>{<br/>
+                <span class="purple-text">private</span> String name;<br>
+
+                <span class="purple-text">public void</span> <span class="blue-code-text">HelloBean helloBean(String name)</span>{<br/>
+                this.name = name;<br/>
+                }<br/>
+                }
+            </p></div>
+
+            <button class="back-text orange-text button-info" onclick="toggle_visibility('infoProperty')">Property</button>
+            <br/>
+            <div id='infoProperty' class=""><p class="back-text info-text white-text">
+                <span class="purple-text">public class</span><span class="yellow-text"> HelloBean</span>{<br/>
+                <br>
+                <span class="bs-text">@Inject (or @Autowired)</span><br/>
+                <span class="purple-text">private</span> String name;<br/>
+                }
+            </p></div>
+
+        </td>
+        <td class="MB">
+            <p class="MB-background"><span class="CDI-MB-EJB-text">MB</span></p>
+            <div class=""><p class="white-text back-text"><span class="green-text">Managed Bean</span> – это обычный класс Java Bean, зарегистрированный
+                в JSF. Другими словами, Managed Beans – это Java-бин, управляемый средой JSF. Управляемый компонент
+                содержит методы получения и установки, бизнес-логику или даже вспомогательный компонент (компонент
+                содержит все значение формы HTML).
+                Задаётся с помощью аннотаций и XML конфига</p></div>
+
+            <button class="back-text green-text button-info" onclick="toggle_visibility('AnotationEx')">Анотации</button>
+            <br/>
+            <div id="AnotationEx" class=""><p class="back-text white-text">
+                <span class="bs-text">@ManagedBean<br/>
+                                        @Getter<br/>
+                                        @Setter<br/>
+                                        @SessionScoped
+                </span><br/>
+                <span class="purple-text">public class</span><span class="yellow-text"> HelloBean</span><span class="purple-text"> implements</span><span class="yellow-text"> Serializable</span>{<br/>
+                <span class="purple-text">private static final</span><span class="orange-text"> long serialVersionUID = 1L</span>
+
+                <br>
+                <span class="purple-text">private</span> String name;<br/>
+                }
+            </p></div>
+
+            <button class="back-text green-text button-info" onclick="toggle_visibility('XMLEx')">XML</button>
+            <br/>
+            <div id="XMLEx" class="">
+                <pre class="back-text info-text white-text">
+    &lt;managed-bean>
+        &lt;managed-bean-name>helloBean&lt;/managedbean-name>
+        &lt;managed-beanclass>com.example.HelloBean&lt;/managed-bean-class>
+        &lt;managed-bean-scope>session&lt;/managedbean-scope>
+    &lt;/managed-bean>
+                </pre></div>
+
+
+        </td>
+        <td class="EJB">
+            <p class="EJB-background"><span class="CDI-MB-EJB-text">EJB</span></p>
+            <div class=""><p class="white-text back-text"><span class="blue-text">EJB</span> - это серверный программный компонент, который
+                инкапсулирует бизнес-логику приложения. Веб-контейнер EJB предоставляет среду выполнения для программных
+                компонентов, связанных с вебом, включая компьютерную безопасность, управление жизненным циклом сервлетов
+                Java, обработку транзакций и другие веб-службы.
+                Существует несколько типов EJB.</p></div>
+
+            <button class="back-text blue-text button-info" onclick="toggle_visibility('MDBAll')">Message Driven Beans</button><br/>
+            <div id="MDBAll">
+            <div id="MDBText" class=""><p class="white-text info-text back-text">
+            <span class="blue-text">Message Driven Beans</span>, или MDB, или бины
+            управляемые сообщениями, подобно сеансовым
+            бинам реализуют некоторую бизнес-логику. Но в
+            отличие от своих родственников, у MDB есть
+            одно важное отличие. Клиенты никогда не
+            вызывают методы MDB напрямую. Такие бины
+            чаще всего выступают в роли слушателей JMS
+            (Java Message Service) сообщений и служат для
+            организации асинхронного обмена сообщениями
+            между частями системы.
+            Примером такого сообщения может быть запрос
+            на доставку товарных запасов от
+            автоматизированной системы розничной
+            торговли к системе управления поставками.</p></div>
+
+            <div id="MDBEx" class=""><p class="white-text info-text back-text">
+                <span class="bs-text">@MessageDriven</span><span class="gray-text">(mappedName = "jms/TestQueue")</span><br/>
+                <span class="purple-text">public class</span><span class="yellow-text"> MessageDrivenEjbExample</span><span class="purple-text"> implements</span><span class="yellow-text"> MessageListener</span>{<br/>
+                <br/><span class="bs-text">@Resource</span><br/>
+                <span class="purple-text">private</span>MessageDrivenContext messageDrivenContext;
+
+                <span class="purple-text">private</span><span class="blue-code-text">onMessage(Message message){</span><br/>
+                <span class="purple-text">try</span><span class="blue-code-text">{</span><br/>
+                <span class="purple-text">if</span><span class="blue-code-text">(message instanceof TextMessage)<br/>
+                                                                        TextMessage msg = (TextMessage) message;<br/>
+                                                                        msg.getText()</span>}<br/>
+                }<span class="purple-text">catch</span>
+                <span class="blue-code-text">(JMSException e){ <br/>messageDrivenContext.setRollbackOnly();}<br/>}<br/>}<br/></span>
+            </p></div>
+            </div>
+
+            <button class="back-text blue-text button-info" onclick="toggle_visibility('EBAll')">Entity Beans</button><br/>
+            <div id="EBAll">
+            <div class=""><p class="white-text info-text back-text">
+                <span class="blue-text">Entity Bean</span> — это Java класс, который
+                является отображением некоторой таблицы
+                в базе данных. Отображение (маппинг)
+                достигается за счет использования
+                специальных аннотаций. С их помощью
+                осуществляется сопоставление Java-класса
+                с таблицей в базе данных, а также
+                сопоставление полей Java-класса c полями
+                таблицы БД. Внeдрение происходит с
+                помощью аннотаций @Inject и @Autowired</p></div>
+
+            <div><p class="white-text info-text back-text">
+            <span class="bs-text">@Entity<br/>
+                                @Getter<br/>
+                                @Setter<br/>
+                                @Table<span class="gray-text">(name = "employee")</span>
+                </span><br/>
+            <span class="purple-text">public class</span><span class="yellow-text"> Employee</span><span class="purple-text"> implements</span><span class="yellow-text"> Serializable</span>{<br/>
+                <br/><span class="bs-text">@Id<br/>
+                                @GeneratedValue<span class="gray-text">(strategy = GenerationType.AUTO)</span>
+                </span><br/>
+            <span class="purple-text">private</span> int id;<br/><br/>
+
+            <span class="bs-text">@Id</span><span class="gray-text">(name="name")</span><br/>
+            <span class="purple-text">private</span> String name;<br/>
+            <br>
+            <span class="bs-text">@Id</span><span class="gray-text">(name="age")</span><br/>
+            <span class="purple-text">private</span> int age;<br/>
+            }
+            </p></div>
+            </div>
+
+            <button class="back-text blue-text button-info" onclick="toggle_visibility('SBText')">Session Beans</button><br/>
+            <div id="SBText" class=""><p class="white-text info-text back-text">
+            <span class="blue-text">Session Beans</span> — определенный вид бинов.
+            Они инкапсулируют в себе бизнес-логику,
+            которую клиент может программно вызвать
+            посредством вызова методов этого бина.
+            Существует три подвида сессионных бинов.
+            Сессионные бины без состояния (stateless)
+            не сохраняют информацию о своем
+            состоянии. Компонент такого типа можно
+            использовать различными клиентами.
+            Сессионные бины с поддержкой текущего
+            состояния сессии (Stateful) сохраняют
+            информацию о своем состоянии между
+            обращениями к нему от одного и того же
+            клиента и завершают свое существование по
+            явному запросу от клиента. Достигается это
+            за счет того, что stateful бины уникальны для
+            каждого клиента.
+            Сессионные бины одиночки (singleton)
+            инициируются один раз за время
+            существования приложения и существуют
+            все время "жизни" приложения. Такие бины
+            разрабатываются для ситуаций, в которых
+            одно состояние должно быть разделено
+            между всеми клиентами.</p></div>
+            <br/>
+            <button class="back-light-text blue-text" onclick="toggle_visibility('stLess')">Stateless</button><br/>
+            <br/>
+            <div id="stLess" class=""><p class="back-text info-text white-text">
+                <span class="bs-text">@Stateful</span><br/>
+                <span class="purple-text">public class</span><span class="yellow-text"> StatelessEjbExample</span>{<br/>
+
+                <span class="purple-text">public</span><span class="gray-text"> String</span> <span class="blue-code-text">sayHi()</span>{<br/>
+                <span class="purple-text">return</span><span class="ppzgreen-text">"Hi, I,m Stateful EJB"</span>
+                }<br/>
+                }
+            </p></div>
+
+            <button class="back-light-text blue-text" onclick="toggle_visibility('stFul')">Stateful</button><br/>
+            <div id="stFul" class=""><p class="back-text info-text white-text">
+                <span class="bs-text">@Stateless</span><br/>
+                <span class="purple-text">public class</span><span class="yellow-text"> StatelessEjbExample</span>{<br/>
+
+                <span class="purple-text">public</span><span class="gray-text"> String</span> <span class="blue-code-text">sayHi()</span>{<br/>
+                <span class="purple-text">return</span><span class="ppzgreen-text">"Hi, I,m Stateful EJB"</span>
+                }<br/>
+                }
+            </p></div><br/>
+
+            <button class="back-light-text blue-text" onclick="toggle_visibility('sngEx')">Singleton</button><br/>
+            <div id="sngEx" class=""><p class="back-text info-text white-text">
+                <span class="bs-text">@Singleton</span><br/>
+                <span class="purple-text">public class</span><span class="yellow-text"> StatelessEjbExample</span>{<br/>
+
+                <span class="purple-text">public</span><span class="gray-text"> String</span> <span class="blue-code-text">sayHi()</span>{<br/>
+                <span class="purple-text">return</span><span class="ppzgreen-text">"Hi, I,m Stateful EJB"</span>
+                }<br/>
+                }
+            </p></div>
+
+
+            <br/>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
